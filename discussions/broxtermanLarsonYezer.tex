@@ -5,12 +5,111 @@
 \begin{document}
 
 \begin{frame}
+	\frametitle{Pairwise correlations among Vancouver vs suburban types}
+	\begin{tabular}{rrrrr}
+  \hline
+ & VanSingle & VanCondo & FVSingle & FVCondo \\
+  \hline
+VanSingle & 1.00 & 0.71 & 0.82 & 0.54 \\
+  VanCondo & 0.71 & 1.00 & 0.71 & 0.70 \\
+  FVSingle & 0.82 & 0.71 & 1.00 & 0.71 \\
+  FVCondo & 0.54 & 0.70 & 0.71 & 1.00 \\
+   \hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Useful reference? Nihilism vs hedonism?}
+	\framesubtitle{Berliant/McMillen}
+	\begin{itemize}
+		\item Might make same linear gradient choice?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{So what would be helpful in intro/conclusion}
+	\framesubtitle{Some ad hoc thougths}
+	\begin{itemize}
+		\item What decision would be affected by different index choice?
+		\item Portfolio efficiency for investor?
+		\item Bailout decision for defaulters?
+		\item Rationalize cap rate differences?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Maybe overly bold claim}
+	\begin{itemize}
+		\item ``insufficient attention has been paid to the implications of non-random sampling within cities''
+		\item Many people were thinking about defaults polluting indexes (or lack thereof biasing upward) during GFC
+		\item If no pubs maybe because no one found anything?
+		\item Vague recollection I tried and found nothing
+		\item But location of course within metro.
+		\item See my review of Handbook of Urban Econ thing \dots
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Zip code price movements boom bust (source, Zillow)}
+	\framesubtitle{Red: Flyover, Blue: Coastal, green: Sand State}
+	\pgfimage[width=.75\textwidth]{zips}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Price of services}
+	``If the objective is to measure the price of housing services or
+	housing space, then the definitions of hand $H$ in the preceding
+	equations should reflect a measure of housing services, rather than
+	assuming that each housing unit provides the same quantity of housing
+	space.''
+	\begin{itemize}
+		\item Is the point that Bill Gates's house should get extra weight?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Muth discussion}
+	\begin{itemize}
+		\item What is going on with $\tau k$ and $\frac{\partial \tau}{\partial k}$ Linear? Nonlinear?
+		\item Per above, linear in distance not realistic due to congestion. Going 1 mile on Cross-Bronx Expressway slower than one mile on 95 in the suburbs.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
 	\frametitle{Common appreciation}
 	\begin{itemize}
 		\item Standard monocentric gradient linear
 			\begin{itemize}
-				\item Value at $r$ = structure + lot size $k\int_{s=r}^{b} \frac{1}{\text{lot size at s}}ds$
+				\item Value at $r$ = structure + lot size $\theta \int_{s=r}^{b} \frac{1}{\text{lot size at s}}ds$
+				\item Time log derivative unlikely constant by $r$
 			\end{itemize}
+		\item But no less realistically (per Williams) $\log v = \log \text{structure} + \theta \left[\ln b(t) - \ln r\right]$
+			\begin{itemize}
+				\item Then location not clear a source of growth heterogeneity
+				\item Might be fine with, say unit income elastcity
+			\end{itemize}
+		\item Zoned single family vs multifamily clearer?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Proposition 2 doesn't really follow from Prop 1}
+	\begin{itemize}
+		\item Are you missing ``if not quasi-linearity, and if linear gradient in distance''?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Is AHS price data bananas?}
+	\begin{itemize}
+		\item 2015-2019 Table 1 shows 18\% vs 13\% per year appreciation
+		\item FHFA per FRED says about 7\%
+		\item Washington, D.C. Table 1 says about 2\%
+		\item FHFA per FRED says about 8\%.
+		\item Even I can afford Attom \dots
+		\item Aggregate Zillow zip indexes by metro central/suburbs?
+		\item Given giant idiosyncratic errors, what can we rule out?
+		\item Strong suggestion: use better data and see if differences as large
 	\end{itemize}
 \end{frame}
 
