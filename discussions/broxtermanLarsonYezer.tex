@@ -1,6 +1,8 @@
 \documentclass{beamer}
 
+\usepackage{booktabs}
 \usepackage{amsmath}
+\usepackage{adjustbox}
 
 \begin{document}
 
@@ -54,9 +56,33 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Vancouver condo sales by year: distance gradients}
+	\pgfimage[width=.75\textwidth]{"/Users/tdavidof/projects/compression/text/fig2_distance_gradient_resid.png"}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vancouver condo sales: (nonlinear) gradients change!}
+	\fontsize{4}{5}\selectfont
+	\input{"/Users/tdavidof/projects/compression/text/table_distance_gradient.tex"}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vancouver Condo: fit}
+	\begin{itemize}
+		\item Log-log fits better 2014
+		\item Subsequent years 
+			\begin{itemize}
+				\item Gradient flattens a lot
+				\item Action is at outer edge
+				\item Levels gets to be much better fit
+			\end{itemize}
+	\end{itemize}
+\end{frame}
 
 \begin{frame}
 	\frametitle{Pairwise correlations among Vancouver vs suburban types}
+	\framesubtitle{Type matters more than location?}
 	\begin{tabular}{rrrrr}
   \hline
  & VanSingle & VanCondo & FVSingle & FVCondo \\
@@ -67,6 +93,22 @@ VanSingle & 1.00 & 0.71 & 0.82 & 0.54 \\
   FVCondo & 0.54 & 0.70 & 0.71 & 1.00 \\
    \hline
 \end{tabular}
+\end{frame}
+
+\begin{frame}
+	\frametitle{What is the question indexes answer?}
+	\begin{itemize}
+		\item Ask a realtor (or self) what is my home worth?
+			\begin{itemize}
+				\item Don't ask initial purchase price
+				\item Unlikely mention index growth
+				\item Don't discuss other property types
+			\end{itemize}
+		\item Mark-to-market LTV distribution?
+			\begin{itemize}
+				\item But then middle of distribution unlikely the object of interest
+			\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
