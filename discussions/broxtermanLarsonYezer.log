@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  9 MAR 2026 17:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  10 MAR 2026 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -986,7 +986,7 @@ thkerncmss.
 
 [6
 
- </Users/davidoff/projects/compression/text/fig2_distance_gradient_resid.png>]
+ </Users/tdavidof/projects/compression/text/fig2_distance_gradient_resid.png>]
 
 [7
 
@@ -995,7 +995,7 @@ thkerncmss.
 [8
 
 ]
-Overfull \vbox (15.19427pt too high) detected at line 139
+Overfull \vbox (15.19427pt too high) detected at line 141
  []
 
 
@@ -1019,6 +1019,10 @@ Overfull \vbox (15.19427pt too high) detected at line 139
 [13
 
 ]
+
+[14
+
+]
 \tf@nav=\write6
 \openout6 = `broxtermanLarsonYezer.nav'.
 
@@ -1037,10 +1041,10 @@ Package rerunfilecheck Info: File `broxtermanLarsonYezer.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22732 strings out of 473190
- 436431 string characters out of 5715801
+ 22738 strings out of 473190
+ 436482 string characters out of 5715801
  806312 words of memory out of 5000000
- 45474 multiletter control sequences out of 15000+600000
+ 45478 multiletter control sequences out of 15000+600000
  571690 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,123p,396b,559s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1053,12 +1057,13 @@ r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on broxtermanLarsonYezer.pdf (13 pages, 1000751 bytes).
+cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on broxtermanLarsonYezer.pdf (14 pages, 1227219 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 365 compressed objects within 4 object streams
- 27 named destinations out of 1000 (max. 500000)
+ 446 PDF objects out of 1000 (max. 8388607)
+ 392 compressed objects within 4 object streams
+ 29 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
