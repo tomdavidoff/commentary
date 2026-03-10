@@ -5,16 +5,23 @@
 \usepackage{adjustbox}
 
 \begin{document}
+\title{Discusssion of Broxterman, Larson, Yezer\\``Characteristics of a Sufficient Statistic to Measure City
+Housing Prices''}
+\author{Tom Davidoff, UBC}
+
+\begin{frame}
+	\titlepage
+\end{frame}
 
 \begin{frame}
 	\frametitle{Contributions}
 	\begin{itemize}
-		\item Further empirical evidence of heterogeneous price growth across space
+		\item Evidence of heterogeneous price growth across space
 			\begin{itemize}
 				\item Builds on e.g. Landvoigt, Piazessi, + Schneider
 			\end{itemize}
 		\item Offers a new methodology for aggregating to the metro level
-		\item Makes us think about units versus space aggregation
+		\item Makes us think about counting units vs hedonic quality  aggregation
 			\begin{itemize}
 				\item Highly salient to the ``shoebox condo'' debate
 			\end{itemize}
@@ -27,12 +34,17 @@
 	\begin{itemize}
 		\item $r$ price or rent, $h$ individual home, $H$ sum of housing units
 		\item What is an $h$ an important issue emphasized by authors
-		\item Not easy to see common use where luxury homes get way more weight
+		\item Instinct: units better but imperfect
+			\begin{itemize}
+				\item Not easy to see common use where luxury homes get way more weight
+				\item Tiny condos getting much cheaper in YYZ helpful?
+			\end{itemize}
 		\item Observation: weights essentially an indicator for being transacted
 			\begin{itemize}
 				\item More evidence on non-representativeness of that sample
 					\begin{itemize}
 						\item Intuition for channel
+						\item New homes a good example (excluded!)
 					\end{itemize}
 			\end{itemize}
 	\end{itemize}
@@ -44,27 +56,38 @@
 		\item Result from familiar monocentric city model 
 			\begin{itemize}
 				\item $\frac{d r(k)}{dk} = -\frac{\frac{d\text{commute cost}}{dk}}{h_{t}}$
+				\item If I move a bit further, $|h\dot{r}| = |\dot{\text{commute cost}}|$
 			\end{itemize}
-		\item But linear commute cost posed unrealistic 
+		\item Also if constant value (construction + option premium) at boundary
 			\begin{itemize}
-				\item 41st to 51st St in Manhattan vs random mile in the suburbs
+				\item $d\left[r(k)-r(b(t))\right] = \theta \dot{b} = dr(k)=$ constant
+				\item Then need constant value in distance
+				\item Some condition on income and price elasticities
 			\end{itemize}
-		\item Suppose $\ln p(h,k) = h+\theta\log\frac{b}{k}$, then border growth yields identical price growth.
+		\item But linear commute cost ??
 			\begin{itemize}
-				\item Joe Williams showed me this
+				\item 41st to 61st St in Manhattan vs random mile in the suburbs
 			\end{itemize}
+		\item Suppose $\ln p(h,k) = \ln h+\theta\log\frac{b}{k}$, then $g'(k)=0$ \\ (with light conditions.)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Work plan as expected}
+	\begin{itemize}
+		\item Show clearly log beats linear price gradient in Vancouver
+		\item Explain that location not the logical heterogenity to focus on
+			\begin{itemize}
+				\item Or at least that this is overblown ``Unless highly restrictive preference assumptions are imposed, appreciation
+rates cannot be spatially invariant.''
+			\end{itemize}
+		\item But not exactly what happened \dots
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Vancouver condo sales by year: distance gradients}
-	\pgfimage[width=.75\textwidth]{"/Users/tdavidof/projects/compression/text/fig2_distance_gradient_resid.png"}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Vancouver condo sales: (nonlinear) gradients change!}
-	\fontsize{4}{5}\selectfont
-	\input{"/Users/tdavidof/projects/compression/text/table_distance_gradient.tex"}
+	\pgfimage[width=.75\textwidth]{$HOME/projects/compression/text/fig2_distance_gradient_resid.png}
 \end{frame}
 
 \begin{frame}
@@ -77,11 +100,19 @@
 				\item Action is at outer edge
 				\item Levels gets to be much better fit
 			\end{itemize}
+		\item So $g'(k)\neq 0$ as authors emphasize
+		\item Reg level P on log distance generally fits by far best
+			\begin{itemize}
+				\item inverse of old literature
+				\item but doesn't capture flattening
+				\item Old literature does get flattening right
+				\item True for single and condo
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Pairwise correlations among Vancouver vs suburban types}
+	\frametitle{Pairwise correlations among Vancouver vs Suburban types}
 	\framesubtitle{Type matters more than location?}
 	\begin{tabular}{rrrrr}
   \hline
@@ -93,6 +124,37 @@ VanSingle & 1.00 & 0.71 & 0.82 & 0.54 \\
   FVCondo & 0.54 & 0.70 & 0.71 & 1.00 \\
    \hline
 \end{tabular}
+\begin{itemize}
+	\item Log index growth 2014-2024: FV condo: 10.7\% 	
+	\item GV single: 5.9\%
+	\item Story: ``flight from quality'' after foreign buyer ban?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{GFC: heterogeneity driven by subprime propensity\\Zip code price movements boom bust (source, Zillow)}
+	\framesubtitle{Red: Flyover, Blue: Coastal, green: Sand State}
+	\pgfimage[width=.75\textwidth]{zips}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Transaction weight: spatial smoothing vs tract indexes?}
+	\begin{itemize}
+		\item Index = sum over tracts tract weight times tract price change
+		\item Start from equal tract weights
+		\item Then transaction weight = 1/number of transactions in tract
+			\begin{itemize}
+				\item This seems like an invitation to outlier problems
+			\end{itemize}
+		\item Suggestion: borrow from kernel estimation literature
+		\item This can extend to multiple dimensions with cell weights
+			\begin{itemize}
+				\item Price point (target income/credit constraints)
+				\item Investor/owner occupier (condo/single)
+				\item \dots
+			\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -108,95 +170,53 @@ VanSingle & 1.00 & 0.71 & 0.82 & 0.54 \\
 			\begin{itemize}
 				\item But then middle of distribution unlikely the object of interest
 			\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Useful reference? Nihilism vs hedonism?}
-	\framesubtitle{Berliant/McMillen}
-	\begin{itemize}
-		\item Might make same linear gradient choice?
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{So what would be helpful in intro/conclusion}
-	\framesubtitle{Some ad hoc thougths}
-	\begin{itemize}
-		\item What decision would be affected by different index choice?
-		\item Portfolio efficiency for investor?
-		\item Bailout decision for defaulters?
-		\item Rationalize cap rate differences?
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Maybe overly bold claim}
-	\begin{itemize}
-		\item ``insufficient attention has been paid to the implications of non-random sampling within cities''
-		\item Many people were thinking about defaults polluting indexes (or lack thereof biasing upward) during GFC
-		\item If no pubs maybe because no one found anything?
-		\item Vague recollection I tried and found nothing
-		\item But location of course within metro.
-		\item See my review of Handbook of Urban Econ thing \dots
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Zip code price movements boom bust (source, Zillow)}
-	\framesubtitle{Red: Flyover, Blue: Coastal, green: Sand State}
-	\pgfimage[width=.75\textwidth]{zips}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Price of services}
-	``If the objective is to measure the price of housing services or
-	housing space, then the definitions of hand $H$ in the preceding
-	equations should reflect a measure of housing services, rather than
-	assuming that each housing unit provides the same quantity of housing
-	space.''
-	\begin{itemize}
-		\item Is the point that Bill Gates's house should get extra weight?
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Common appreciation}
-	\begin{itemize}
-		\item Standard monocentric gradient linear
+		\item What decision-maker needs to aggregate to 1-type-metro-level?
 			\begin{itemize}
-				\item Value at $r$ = structure + lot size $\theta \int_{s=r}^{b} \frac{1}{\text{lot size at s}}ds$
-				\item Time log derivative unlikely constant by $r$
+				\item Portfolio efficiency for investor? X
+				\item Workout decision for lenders? X
+				\item Government transfer tax forecast? $\surd$
 			\end{itemize}
-		\item But no less realistically (per Williams) $\log v = \log \text{structure} + \theta \left[\ln b(t) - \ln r\right]$
-			\begin{itemize}
-				\item Then location not clear a source of growth heterogeneity
-				\item Might be fine with, say unit income elastcity
-			\end{itemize}
-		\item Zoned single family vs multifamily clearer?
+		\item Has anyone ever messed up an optimization with wrong index info?
 	\end{itemize}
 \end{frame}
-
-\begin{frame}
-	\frametitle{Proposition 2 doesn't really follow from Prop 1}
-	\begin{itemize}
-		\item Are you missing ``if not quasi-linearity, and if linear gradient in distance''?
-	\end{itemize}
-\end{frame}
-
 \begin{frame}
 	\frametitle{Is AHS price data bananas?}
 	\begin{itemize}
-		\item 2015-2019 Table 1 shows 18\% vs 13\% per year appreciation
+		\item 2015-2019 Table 1 shows Atlanta 18\% vs 13\% per year appreciation
 		\item FHFA per FRED says about 7\%
 		\item Washington, D.C. Table 1 says about 2\%
-		\item FHFA per FRED says about 8\%.
-		\item Even I can afford Attom \dots
+		\item FHFA per FRED says about 3.7\%.
 		\item Aggregate Zillow zip indexes by metro central/suburbs?
-		\item Given giant idiosyncratic errors, what can we rule out?
 		\item Strong suggestion: use better data and see if differences as large
 	\end{itemize}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Summary}
+	\begin{itemize}
+		\item Important takeaways from paper
+			\begin{itemize}
+				\item Price growth not constant across submarkets
+				\item Spatial differences in growth stand out
+				\item Aggregation weights depend on target unit of measure
+			\end{itemize}
+		\item Suggestions
+			\begin{itemize}
+				\item Consider whether spatial differentiation warrants focus
+				\item Sane models \emph{can} imply constant appreciation in distance
+					\begin{itemize}
+						\item My evidence mixed and weird on gradient
+						\item Discuss this literature (Mills, McMillen, Coulson, \dots ) more
+					\end{itemize}
+				\item Use better data and work with kernel smoothing techniques
+					\begin{itemize}
+						\item Inverse weights likely problematic
+					\end{itemize}
+				\item Do more work to convince that large aggregates have value
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
 
 \end{document}
 

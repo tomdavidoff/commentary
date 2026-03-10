@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  8 MAR 2026 21:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  9 MAR 2026 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -939,29 +939,34 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (./broxtermanLarsonYezer.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+
+Package hyperref Warning: Option `pdfauthor' has already been used,
+(hyperref)                setting the option has no effect on input line 10.
+
+
+
+[1
+
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 22.
+ut line 29.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-
-[1
-
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 [2
 
@@ -973,43 +978,7 @@ thkerncmss.
 
 [4
 
- </Users/tdavidof/projects/compression/text/fig2_distance_gradient_resid.png>] 
-(/Users/tdavidof/projects/compression/text/table_distance_gradient.tex
-LaTeX Font Info:    Calculating math sizes for size <4> on input line 4.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <2> not available
-(Font)              size <3> substituted on input line 4.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4> not available
-(Font)              size <5> substituted on input line 4.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2.79999> not available
-(Font)              size <5> substituted on input line 4.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2> not available
-(Font)              size <5> substituted on input line 4.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 4.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2.79999> not available
-(Font)              size <5> substituted on input line 4.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2> not available
-(Font)              size <5> substituted on input line 4.
-
-)
-Overfull \vbox (11.7444pt too high) detected at line 68
- []
-
-
+]
 
 [5
 
@@ -1017,7 +986,7 @@ Overfull \vbox (11.7444pt too high) detected at line 68
 
 [6
 
-]
+ </Users/davidoff/projects/compression/text/fig2_distance_gradient_resid.png>]
 
 [7
 
@@ -1026,10 +995,14 @@ Overfull \vbox (11.7444pt too high) detected at line 68
 [8
 
 ]
+Overfull \vbox (15.19427pt too high) detected at line 139
+ []
+
+
 
 [9
 
-]
+ <./zips.png (PNG copy)>]
 
 [10
 
@@ -1037,21 +1010,13 @@ Overfull \vbox (11.7444pt too high) detected at line 68
 
 [11
 
- <./zips.png (PNG copy)>]
+]
 
 [12
 
 ]
 
 [13
-
-]
-
-[14
-
-]
-
-[15
 
 ]
 \tf@nav=\write6
@@ -1068,20 +1033,15 @@ Overfull \vbox (11.7444pt too high) detected at line 68
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 3.0pt have occurred.
-
 Package rerunfilecheck Info: File `broxtermanLarsonYezer.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22708 strings out of 473190
- 436008 string characters out of 5715801
- 818312 words of memory out of 5000000
- 45443 multiletter control sequences out of 15000+600000
- 575105 words of font info for 95 fonts, out of 8000000 for 9000
+ 22732 strings out of 473190
+ 436431 string characters out of 5715801
+ 806312 words of memory out of 5000000
+ 45474 multiletter control sequences out of 15000+600000
+ 571690 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,123p,396b,559s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1093,13 +1053,12 @@ r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on broxtermanLarsonYezer.pdf (15 pages, 1385443 bytes).
+cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on broxtermanLarsonYezer.pdf (13 pages, 1000751 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 417 compressed objects within 5 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 365 compressed objects within 4 object streams
+ 27 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
