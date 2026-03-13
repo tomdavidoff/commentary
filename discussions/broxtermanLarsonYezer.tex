@@ -16,12 +16,12 @@ Housing Prices''}
 \begin{frame}
 	\frametitle{Paper Contributions}
 	\begin{itemize}
-		\item Evidence of heterogeneous price growth across space w/in metros
+		\item Shows heterogeneous price growth across space w/in metros
 			\begin{itemize}
 				\item Builds on e.g. Landvoigt, Piazessi, + Schneider
 			\end{itemize}
 		\item Offers a new methodology for aggregating to the metro level
-		\item Makes us think about counting units vs hedonic quality  aggregation
+		\item Discussion of aggregating across units vs hedonic quality  
 			\begin{itemize}
 				\item Salient to the ``shoebox condo'' debate
 			\end{itemize}
@@ -29,22 +29,23 @@ Housing Prices''}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Target for Laspeyre's index}
+	\frametitle{Target for Laspeyre's index: units}
 	$$\frac{\Delta r^*_t}{r_{t-1}} = \frac{\sum_k r_t(k) h_{t-1}(k) / H_{t-1}(k)}{\sum_k r_{t-1}(k) h_{t-1}(k) / H_{t-1}(k)}.$$
 	Aggregating across tracts, authors propose:
 	$$\Delta P_{jt} = \sum_{i} W_{ijt} \Delta P_{it}$$
 	This works if $W_{ijt} = \sum_{k\in i} \frac{h_{t-1}(k)}{H_{t-1}(k)}$ for all $i$.
 	\begin{itemize}
-		\item What units are $h$ in? an important issue emphasized by authors
+		\item What units are $h$ in? Rooms? Value? Units?
 		\item Warrants further discussion
 			\begin{itemize}
 				\item Not easy to see use where luxury homes get huge weight
 				\item Tiny condos getting much cheaper in YYZ helpful?
 			\end{itemize}
-		\item Also more discussion on why transaction weights non-representative
+		\item Also why are transaction weights non-representative?
 			\begin{itemize}
-				\item Figure 2  shows geographic pattern
+				\item Table 2 shows weights matter
 				\item New homes a good example (excluded!)
+				\item But what data generating process causes this?
 			\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -72,7 +73,7 @@ Housing Prices''}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Work plan as expected}
+	\frametitle{My empirical work plan for discussion}
 	\begin{itemize}
 		\item Show clearly log beats linear price gradient in Vancouver
 		\item Explain that location not the logical heterogenity to focus on
@@ -84,7 +85,7 @@ Housing Prices''}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Vancouver condo sales by year: distance gradients}
+	\frametitle{Vancouver condo prices by year: distance gradients}
 	\pgfimage[width=.75\textwidth]{$HOME/projects/compression/text/fig2_distance_gradient_resid.png}
 \end{frame}
 
@@ -103,7 +104,6 @@ Housing Prices''}
 			\begin{itemize}
 				\item inverse of old literature
 				\item but doesn't capture flattening
-				\item Old literature does get flattening right
 				\item True for single and condo
 			\end{itemize}
 		\item Box-Cox results for $\lambda$:
@@ -192,11 +192,11 @@ VanSingle & 1.00 & 0.71 & 0.82 & 0.54 \\
 				\item Government transfer tax forecast? But tx weights!
 				\item CPI (incumbent vs turnover?)
 			\end{itemize}
-		\item Has anyone ever messed up an optimization with wrong index info?
+		\item Has anyone messed up an optimization with wrong index info?
 	\end{itemize}
 \end{frame}
 \begin{frame}
-	\frametitle{Is AHS price data bananas?}
+	\frametitle{AHS as source for index comparisons? }
 	\begin{itemize}
 		\item 2015-2019 Table 1 shows Atlanta 18\% vs 13\% per year appreciation
 		\item FHFA per FRED says about 7\%
@@ -227,7 +227,7 @@ VanSingle & 1.00 & 0.71 & 0.82 & 0.54 \\
 					\end{itemize}
 				\item Use better data and work with kernel smoothing techniques
 					\begin{itemize}
-						\item Inverse weights likely problematic
+						\item Inverse transaction weights likely problematic
 					\end{itemize}
 				\item Do more work to convince that large aggregates have value
 			\end{itemize}
