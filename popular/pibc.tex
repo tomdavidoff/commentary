@@ -1,0 +1,194 @@
+\documentclass{beamer}
+\usetheme{metropolis}
+
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{hyperref}
+% Define Sauder green
+\definecolor{saudergreen}{RGB}{91,191,33}
+% Or: \definecolor{saudergreen}{HTML}{A3BD00}
+% Apply it to the frame title background and text
+\setbeamercolor{frametitle}{bg=saudergreen, fg=white}
+
+\begin{document}
+
+\title{PIBC: Think like a housing economist}
+\author{Tom Davidoff\\Sauder School of Business, UBC}
+\frame{\titlepage}
+
+\begin{frame}
+	\frametitle{The time value of money}
+	\begin{itemize}
+		\item A dollar now generally viewed as more valuable than a dollar in the future
+			\begin{itemize}
+				\item Inflation
+				\item Can invest the dollar now and earn a return
+				\item Impatience 
+			\end{itemize}
+		\item A discount rate translates future to present dollars
+			\begin{itemize}
+				\item We will call this rate $d$
+				\item The ``present value'' of a payment of \$$x$ in $t$ years is $\frac{x}{\left[1+d\right]^t}$.
+				\item Example if discount rate is 10\% \$1,000 in 7 years has PV
+					$$\frac{1000}{\left[1.10\right]^7} \approx \$513$$
+			\end{itemize}
+		\item Project Net Present Value (``NPV'') 
+			\begin{itemize}
+				\item Is sum of PV associated with project at all dates
+				\item Including negative of investment today (date 0)
+					$$NPV = \sum_{t=0}^{\infty}x_{t}\left[1+d\right]^{-t}$$
+				\item (assuming constant discount rate ``flat yield curve'')
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{More on discounting}
+	\begin{itemize}
+		\item Arguably, parents job to inculcate low discount rate
+		\item IRR: ``internal rate of return''
+			\begin{itemize}
+				\item Like NPV Jeopardy
+				\item ``At this discount rate, NPV of project is zero''
+				\item Positive IRR only if $IRR>d$
+			\end{itemize}
+		\item Project pro formas
+			\begin{itemize}
+				\item All the info needed to compute NPV and IRR
+				\item Much more detail than just dates and cash flows
+				\item Important ratio: ``cap rate''
+					\begin{itemize}
+						\item Net operating income (NOI) in year 1 divided by cost\\
+								Acquisition cost for simple purchase\\
+								Total project cost o/w
+					\end{itemize}
+				\item NOI vs cashflow
+					\begin{itemize}
+						\item NOI ignores financing (interest and amortization)
+						\item Cashflow $\approx$ NOI after financing costs
+					\end{itemize}
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{The world's simplest pro forma}
+	\begin{itemize}
+		\item Buy land for \$1M today
+		\item Spend \$1M building something also today
+		\item Sell for \$2.25M in one year
+		\item Discount rate: 10\%
+		\item NPV: -1M - 1M + $\frac{2.5M}{1.1} \approx \$272K$
+		\item IRR: -2M + 2.5M/(1+IRR) = 0 $\Rightarrow$ IRR=25\%
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Useful game to understand discounting}
+	\begin{itemize}
+		\item Pick your favourite musician's last name
+			\begin{itemize}
+				\item A-M: $d=3\%$
+				\item N-Z: $d=10\%$
+			\end{itemize}
+		\item Match up with a partner
+		\item Try to create a loan that has positive NPV to both of you
+		\item Loan has amount $L$, interest rate $r$, and term of 1 year
+		\item Borrower NPV: $L\left[1-\frac{1+r}{1+d}\right]$
+			\begin{itemize}
+				\item Positive iff $r<d$
+			\end{itemize}
+		\item Lender NPV: $L\left[\frac{1+r}{1+d}-1\right]$
+			\begin{itemize}
+				\item Positive iff $r>d$
+			\end{itemize}
+		\item If same discount rate, impossible to have +NPV for both
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Segue: from game to why afforable housing mandates are dicey}
+	\begin{itemize}
+		\item What do markets do, ideally?
+		\item Get everyone to agree on ratios of benefits to cost
+		\item I have a discount rate of 10\%, you 5\%
+			\begin{itemize}
+				\item You should lend me money at a rate between 5\% and 10\%
+				\item Positive NPV to both of us
+			\end{itemize}
+		\item Very similar: 
+			\begin{itemize}
+				\item You can build an apartment for \$500K
+				\item I value the apartment at \$550K
+			\end{itemize}
+		\item With ``complete markets'' trades happen until agreement
+			\begin{itemize}
+				\item I have so much housing, I no longer value more than your cost
+			\end{itemize}
+		\item Affordability mandates:
+			\begin{itemize}
+				\item Someone willing to pay \$400K 
+				\item Market price \$600K
+				\item Force sale at, say, \$350K
+				\item Buyer gets +\$50K, seller gets -\$250K
+				\item ``Pareto gain'': seller gives buyer \$150K!
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{The money value of time and urban land markets}
+	\begin{itemize}
+		\item ``Location, location, location''
+		\item The classical ``monocentric city model''
+			\begin{itemize}
+				\item Everyone commutes to location 0: the CBD
+				\item Cost of commuting: $t$ per unit of distance
+				\item How does land price change with distance?
+			\end{itemize}
+		\item ``Bid-rent curves''
+			\begin{itemize}
+				\item Willingness to pay for land at distance $x$ is $R(x)$
+				\item To be indifferent between living at $x$ a tiny bit further
+				\item Consume $l(x)$ units of land
+				\item $R(x)l(x) = R(x+dx)l(x+dx) + t\cdot dx$
+				\item So slope of $R$ curve is $-\frac{t}{l(x)}$
+				\item Land valuation falls with distance, 
+					\begin{itemize}
+						\item But more slowly if you consume more land
+						\item Hence steeper curve closer to downtown
+						\item (also $t$ bigger downtown)
+					\end{itemize}
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Equilibrium with multiple uses}
+	\begin{itemize}
+		\item Remember, slope of bid-rent curve is $-\frac{t}{l(x)}$
+		\item Closer to downtown will be steeper curve
+	\end{itemize}
+	\pgfimage[height=6cm]{monocentric}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Who should be closer to town given bid rent curve logic?}
+	\begin{itemize}
+		\item Remember, slope of bid-rent curve is $-\frac{t}{l(x)}$
+		\item Starbucks vs WalMart
+		\item Yuppie versus family with 1 earner, 2 kids, 2 pets?
+		\item Apartment building versus house with yard?
+		\item Office building versus warehouse?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Cap rates, elasticity of supply, and equilibrium\\Where should cap rate be lower?\\Inelastically supplied city if demand is growing}
+	\pgfimage[height=6cm]{elasticity}
+\end{frame}
+	
+	
+	
+		
+\end{document}
