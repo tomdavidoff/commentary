@@ -14,38 +14,38 @@ Housing Prices''}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Contributions}
+	\frametitle{Paper Contributions}
 	\begin{itemize}
-		\item Evidence of heterogeneous price growth across space
+		\item Shows heterogeneous price growth across space w/in metros
 			\begin{itemize}
 				\item Builds on e.g. Landvoigt, Piazessi, + Schneider
 			\end{itemize}
 		\item Offers a new methodology for aggregating to the metro level
-		\item Makes us think about counting units vs hedonic quality  aggregation
+		\item Discussion of aggregating across units vs hedonic quality  
 			\begin{itemize}
-				\item Highly salient to the ``shoebox condo'' debate
+				\item Salient to the ``shoebox condo'' debate
 			\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Target for Laspeyre's index}
+	\frametitle{Target for Laspeyre's index: units}
 	$$\frac{\Delta r^*_t}{r_{t-1}} = \frac{\sum_k r_t(k) h_{t-1}(k) / H_{t-1}(k)}{\sum_k r_{t-1}(k) h_{t-1}(k) / H_{t-1}(k)}.$$
+	Aggregating across tracts, authors propose:
+	$$\Delta P_{jt} = \sum_{i} W_{ijt} \Delta P_{it}$$
+	This works if $W_{ijt} = \sum_{k\in i} \frac{h_{t-1}(k)}{H_{t-1}(k)}$ for all $i$.
 	\begin{itemize}
-		\item $r$ price or rent, $h$ individual home, $H$ sum of housing units
-		\item What is an $h$ an important issue emphasized by authors
-		\item Instinct: units better but imperfect
+		\item What units are $h$ in? Rooms? Value? Units?
+		\item Warrants further discussion
 			\begin{itemize}
-				\item Not easy to see common use where luxury homes get way more weight
+				\item Not easy to see use where luxury homes get huge weight
 				\item Tiny condos getting much cheaper in YYZ helpful?
 			\end{itemize}
-		\item Observation: weights essentially an indicator for being transacted
+		\item Also why are transaction weights non-representative?
 			\begin{itemize}
-				\item More evidence on non-representativeness of that sample
-					\begin{itemize}
-						\item Intuition for channel
-						\item New homes a good example (excluded!)
-					\end{itemize}
+				\item Table 2 shows weights matter
+				\item New homes a good example (excluded!)
+				\item But what data generating process causes this?
 			\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -58,7 +58,7 @@ Housing Prices''}
 				\item $\frac{d r(k)}{dk} = -\frac{\frac{d\text{commute cost}}{dk}}{h_{t}}$
 				\item If I move a bit further, $|h\dot{r}| = |\dot{\text{commute cost}}|$
 			\end{itemize}
-		\item Also if constant value (construction + option premium) at boundary
+		\item Also if constant (construction + option premium) at boundary
 			\begin{itemize}
 				\item $d\left[r(k)-r(b(t))\right] = \theta \dot{b} = dr(k)=$ constant
 				\item Then need constant value in distance
@@ -73,27 +73,26 @@ Housing Prices''}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Work plan as expected}
+	\frametitle{My empirical work plan for discussion}
 	\begin{itemize}
 		\item Show clearly log beats linear price gradient in Vancouver
 		\item Explain that location not the logical heterogenity to focus on
 			\begin{itemize}
-				\item Or at least that this is overblown ``Unless highly restrictive preference assumptions are imposed, appreciation
-rates cannot be spatially invariant.''
+				\item Or at least that this is overblown ``Unless highly restrictive preference assumptions are imposed, appreciation rates cannot be spatially invariant.''
 			\end{itemize}
 		\item But not exactly what happened \dots
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Vancouver condo sales by year: distance gradients}
+	\frametitle{Vancouver condo prices by year: distance gradients}
 	\pgfimage[width=.75\textwidth]{$HOME/projects/compression/text/fig2_distance_gradient_resid.png}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Vancouver Condo: fit}
 	\begin{itemize}
-		\item Log-log fits better 2014
+		\item Log-log fits better than level-level 2014
 		\item Subsequent years 
 			\begin{itemize}
 				\item Gradient flattens a lot
@@ -105,8 +104,11 @@ rates cannot be spatially invariant.''
 			\begin{itemize}
 				\item inverse of old literature
 				\item but doesn't capture flattening
-				\item Old literature does get flattening right
 				\item True for single and condo
+			\end{itemize}
+		\item Box-Cox results for $\lambda$:
+			\begin{itemize}
+				\item Appx. .6 (2!) with level (log) on RHS (similar condo/SF)
 			\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -154,33 +156,47 @@ VanSingle & 1.00 & 0.71 & 0.82 & 0.54 \\
 				\item Investor/owner occupier (condo/single)
 				\item \dots
 			\end{itemize}
+		\item Optimal borrowing from neighbors?
+			\begin{itemize}
+				\item Probably more precision
+				\item Bad for certain purposes (e.g. subunit correlations)
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{One motivation for messed up weights: market hotness}
+	\begin{itemize}
+		\item Winners sell, losers held
+		\item Does this bias up growth? Down volatility
+			\begin{itemize}
+				\item Seems like a worthy exercise for paper
+			\end{itemize}
+		\item Examples:
+			\begin{itemize}
+				\item West Van detached pre/post foreign buyer stuff
+				\item GFC boom/bust minority neighborhoods
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{What is the question indexes answer?}
 	\begin{itemize}
-		\item Ask a realtor (or self) what is my home worth?
-			\begin{itemize}
-				\item Don't ask initial purchase price
-				\item Unlikely mention index growth
-				\item Don't discuss other property types
-			\end{itemize}
-		\item Mark-to-market LTV distribution?
-			\begin{itemize}
-				\item But then middle of distribution unlikely the object of interest
-			\end{itemize}
 		\item What decision-maker needs to aggregate to 1-type-metro-level?
 			\begin{itemize}
+				\item Mark-to-market LTV distribution? X (nonlinearity)
+				\item Real estate pro? X (comp set \dots)
 				\item Portfolio efficiency for investor? X
 				\item Workout decision for lenders? X
-				\item Government transfer tax forecast? $\surd$
+				\item Government transfer tax forecast? But tx weights!
+				\item CPI (incumbent vs turnover?)
 			\end{itemize}
-		\item Has anyone ever messed up an optimization with wrong index info?
+		\item Has anyone messed up an optimization with wrong index info?
 	\end{itemize}
 \end{frame}
 \begin{frame}
-	\frametitle{Is AHS price data bananas?}
+	\frametitle{AHS as source for index comparisons? }
 	\begin{itemize}
 		\item 2015-2019 Table 1 shows Atlanta 18\% vs 13\% per year appreciation
 		\item FHFA per FRED says about 7\%
@@ -199,6 +215,7 @@ VanSingle & 1.00 & 0.71 & 0.82 & 0.54 \\
 				\item Price growth not constant across submarkets
 				\item Spatial differences in growth stand out
 				\item Aggregation weights depend on target unit of measure
+				\item Transaction indicator unlikely optimal weighting
 			\end{itemize}
 		\item Suggestions
 			\begin{itemize}
@@ -210,7 +227,7 @@ VanSingle & 1.00 & 0.71 & 0.82 & 0.54 \\
 					\end{itemize}
 				\item Use better data and work with kernel smoothing techniques
 					\begin{itemize}
-						\item Inverse weights likely problematic
+						\item Inverse transaction weights likely problematic
 					\end{itemize}
 				\item Do more work to convince that large aggregates have value
 			\end{itemize}
