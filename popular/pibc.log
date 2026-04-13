@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  17 MAR 2026 09:51
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  24 MAR 2026 15:59
+>>>>>>> refs/remotes/origin/main
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1038,33 +1042,31 @@ Overfull \vbox (44.55656pt too high) detected at line 17
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
 
+[2
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
+
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 43.
+ut line 66.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-Overfull \vbox (40.32674pt too high) detected at line 43
+Overfull \vbox (26.52681pt too high) detected at line 66
  []
 
-
-
-[2
-
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 
 [3
@@ -1082,7 +1084,11 @@ Overfull \vbox (40.32674pt too high) detected at line 43
 [6
 
 ]
+<<<<<<< HEAD
 Overfull \vbox (14.67735pt too high) detected at line 157
+=======
+Overfull \vbox (14.67735pt too high) detected at line 164
+>>>>>>> refs/remotes/origin/main
  []
 
 
@@ -1105,7 +1111,18 @@ Overfull \vbox (14.67735pt too high) detected at line 157
 
 [11
 
+<<<<<<< HEAD
+=======
+]
+
+[12
+
+>>>>>>> refs/remotes/origin/main
  <./elasticity.png>]
+
+[13
+
+]
 \tf@nav=\write6
 \openout6 = `pibc.nav'.
 
@@ -1124,8 +1141,13 @@ Package rerunfilecheck Info: File `pibc.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  26505 strings out of 473190
  525901 string characters out of 5715801
+=======
+ 26509 strings out of 473190
+ 525939 string characters out of 5715801
+>>>>>>> refs/remotes/origin/main
  885273 words of memory out of 5000000
  49207 multiletter control sequences out of 15000+600000
  573257 words of font info for 87 fonts, out of 8000000 for 9000
@@ -1134,6 +1156,7 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+<<<<<<< HEAD
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr
 /local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/l
@@ -1153,5 +1176,25 @@ PDF statistics:
  171 PDF objects out of 1000 (max. 8388607)
  112 compressed objects within 2 object streams
  23 named destinations out of 1000 (max. 500000)
+=======
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
+Output written on pibc.pdf (13 pages, 256471 bytes).
+PDF statistics:
+ 178 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+>>>>>>> refs/remotes/origin/main
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

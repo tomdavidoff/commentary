@@ -17,9 +17,32 @@
 \frame{\titlepage}
 
 \begin{frame}
+	\frametitle{Today's learning objectives}
+	\begin{itemize}
+		\item Elementary financial analysis
+			\begin{itemize}
+				\item Discounting
+				\item NPV and IRR
+				\item Cap rates
+			\end{itemize}
+		\item A standard ``monocentric'' model of location
+			\begin{itemize}
+				\item How price should change with location
+				\item Which land uses go where
+			\end{itemize}
+		\item Supply elasticity, demand growth, and price growth
+		\item Economists skepticism of affordable housing mandates
+			\begin{itemize}
+				\item Doesn't mean they are bad
+				\item Do need a good reason for ``in kind'' vs cash
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
 	\frametitle{The time value of money}
 	\begin{itemize}
-		\item A dollar now generally viewed as more valuable than a dollar in the future
+		\item \$1 now generally deemed more valuable than \$1 in the future
 			\begin{itemize}
 				\item Inflation
 				\item Can invest the dollar now and earn a return
@@ -80,6 +103,10 @@
 		\item Discount rate: 10\%
 		\item NPV: -1M - 1M + $\frac{2.5M}{1.1} \approx \$272K$
 		\item IRR: -2M + 2.5M/(1+IRR) = 0 $\Rightarrow$ IRR=25\%
+		\item Note NPV and IRR fall if project takes 2 years vs 1:
+			NPV: -2M + $\frac{2.5M}{1.1^2} \approx$ \$66K\\
+		\item NPV higher if discount rate is lower, say 5\%
+			NPV: -2M + $\frac{2.5M}{1.05} \approx$ \$380K
 	\end{itemize}
 \end{frame}
 
@@ -199,7 +226,31 @@
 		\item Starbucks vs WalMart
 		\item Yuppie versus family with 1 earner, 2 kids, 2 pets?
 		\item Apartment building versus house with yard?
+			\begin{itemize}
+				\item But zoning!
+			\end{itemize}
 		\item Office building versus warehouse?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Where should cap rates be higher?}
+	\begin{itemize}
+		\item Investors presumably get similar total returns
+			\begin{itemize}
+				\item In all locations
+				\item In all asset classes
+				\item Otherwise too many net sellers or buyers
+			\end{itemize}
+		\item If I buy, hold one period, then sell, ''unleveraged'' profit = 
+			$$- \text{Price}_{0} + \text{Price}_{1} * \frac{cap rate}{1+d} + \frac{\text{Price}_{2}}{\left[1+d\right]^2}$$
+		\item So if return is equal, $\uparrow$ cap rate $\Rightarrow$ $\downarrow \text{Price}_{2}$
+		\item So higher cap rate in:
+			\begin{itemize}
+				\item Vancouver (San Francisco) apartment 2021?
+				\item Toronto apartment 2025?
+				\item Winnipeg (Des Moines) shopping center?
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -207,8 +258,28 @@
 	\frametitle{Cap rates, elasticity of supply, and equilibrium\\Where should cap rate be lower?\\Inelastically supplied city if demand is growing}
 	\pgfimage[height=6cm]{elasticity}
 \end{frame}
-	
-	
-	
-		
+
+\begin{frame}
+\frametitle{Recap of today's learning objectives}
+\begin{itemize}
+	\item Elementary financial analysis
+		\begin{itemize}
+			\item Discounting
+			\item NPV and IRR
+			\item Cap rates
+		\end{itemize}
+	\item A standard ``monocentric'' model of location
+		\begin{itemize}
+			\item How price should change with location
+			\item Which land uses go where
+		\end{itemize}
+	\item Supply elasticity, demand growth, and price growth
+	\item Economists skepticism of affordable housing mandates
+		\begin{itemize}
+			\item Doesn't mean they are bad
+			\item Do need a good reason for ``in kind'' vs cash
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
 \end{document}
