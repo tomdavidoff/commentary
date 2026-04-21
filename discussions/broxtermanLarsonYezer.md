@@ -12,6 +12,10 @@ This paper shows that a transactions-based home price index will represent mean 
 
 Using both annual Census tract appreciation estimates from [@ContatLarson] (Figures 1 and 2) and coarser differences in appreciation rates between central cities and suburbs in American Housing Survey data (Tables 1 and 2), the paper shows both that appreciation rates and transaction frequencies vary with distance from downtown. The authors propose price indexes that average local (tract or central city versus suburb indicators) appreciation rates with weights proportional to housing units, rooms or value. Using [@ContatLarson] data, These three Laspeyre's-consistent methods provide appreciation rate estimates that are visually indistinguishable at an annual frequency for Boston and Houston, but accumulate to mild differences over the three decades between 1990 and 2020.  
 
+These are important contributions. The paper provides a guide to assemble price indexes that are more likely representative of price growth (and hence affordability and asset wealth) for all households in a metropolitan area than most indexes which rely on representativeness of the transacted stock. To have broader impact, the paper should address the following questions:
+
+1. 
+
 ## Emphasis on Location as Heterogeneity
 
 The authors observe in equation (4) that if transportation costs are linear in raw distance from downtown, then price gradients in a monocentric city are given by the ratio of that linear cost in distance divided by housing consumption. Without constant housing consumption by distance, if appreciation rates are constant in distance, the authors argue that appreciation rates will vary by distance.\footnote{This should be presented as a result, as I understand the paper it is implicit. The result is plausible intuitively but could use a formal proof. If rent per unit of housing is a constant $m$ plus $\theta\left[k-b]$, where $k$ is distance from downtown, and $b$ is the current urban fringe, then the appreciation rate is $\frac{\theta{\dot{b}}}{m+\theta\left[k-b\right]}$, which is not constant in $k$.}
