@@ -12,9 +12,7 @@ This paper shows that a transactions-based home price index will represent mean 
 
 Using both annual Census tract appreciation estimates from [@ContatLarson] (Figures 1 and 2) and coarser differences in appreciation rates between central cities and suburbs in American Housing Survey data (Tables 1 and 2), the paper shows both that appreciation rates and transaction frequencies vary with distance from downtown. The authors propose price indexes that average local (tract or central city versus suburb indicators) appreciation rates with weights proportional to housing units, rooms or value. Using [@ContatLarson] data, These three Laspeyre's-consistent methods provide appreciation rate estimates that are visually indistinguishable at an annual frequency for Boston and Houston, but accumulate to mild differences over the three decades between 1990 and 2020.  
 
-These are important contributions. The paper provides a guide to assemble price indexes that are more likely representative of price growth (and hence affordability and asset wealth) for all households in a metropolitan area than most indexes which rely on representativeness of the transacted stock. To have broader impact, the paper should address the following questions:
-
-1. 
+These are important contributions. The paper provides a guide to assemble price indexes that are more likely representative of price growth (and hence affordability and asset wealth) for all households in a metropolitan area than most indexes which rely on representativeness of the transacted stock. To have broader impact, the paper should address the following questions, described in more detail below. 1. Is it really clear in theory that rent growth should vary by location? 2. Why focus on price growth heterogeneity by location as opposed to, say, structure type?  3. What are empirical examples of failure to account for heterogeneity in price growth that would be solved by the proposed approach?
 
 ## Emphasis on Location as Heterogeneity
 
