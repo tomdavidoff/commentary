@@ -16,7 +16,21 @@ These are important contributions. The paper provides a guide to assemble price 
 
 ## Emphasis on Location as Heterogeneity
 
-The authors observe in equation (4) that if transportation costs are linear in raw distance from downtown, then price gradients in a monocentric city are given by the ratio of that linear cost in distance divided by housing consumption. Without constant housing consumption by distance, if appreciation rates are constant in distance, the authors argue that appreciation rates will vary by distance.\footnote{This should be presented as a result, as I understand the paper it is implicit. The result is plausible intuitively but could use a formal proof. If rent per unit of housing is a constant $m$ plus $\theta\left[k-b]$, where $k$ is distance from downtown, and $b$ is the current urban fringe, then the appreciation rate is $\frac{\theta{\dot{b}}}{m+\theta\left[k-b\right]}$, which is not constant in $k$.}
+In a dynamic monocentric city where commuting costs and the cost of developing
+a constant quality home at the urban fringe are constant, homes appreciate by
+the amount by which fringe homes get worse: the product of commuting cost per
+unit of distance at the urban fringe times the expansion of the fringe. As the
+authors observe, for this to yield equal percentage 
+
+
+but the urban fringe expands over time, the appreciation of a home at a given distance from downtown is equal to the improvement 
+As the authors observe, in a standard monocentric city model, the derivative of housing rent per unit of hedonic quality with respect to distance from downtown is the ratio of the slope of commuting cost in distance divided by housing consumption. If the cost of commuting and the price of housing at an expanding urban fringe are constant with time, then the appreciation in housing rents for all homes will equal to the slope of the commute cost at the urban fringe times the rate at which the fringe expands. As that rent growth is a constant amount regardless of distance from do
+culllkku
+
+The authors observe in equation (4) that if transportation costs are linear in raw distance from downtown, then price gradients in a monocentric city are given by the ratio of that linear cost in distance divided by housing consumption. 
+
+
+Without constant housing consumption by distance, if appreciation rates are constant in distance, the authors argue that appreciation rates will vary by distance.\footnote{This should be presented as a result, as I understand the paper it is implicit. The result is plausible intuitively but could use a formal proof. If rent per unit of housing is a constant $m$ plus $\theta\left[k-b]$, where $k$ is distance from downtown, and $b$ is the current urban fringe, then the appreciation rate is $\frac{\theta{\dot{b}}}{m+\theta\left[k-b\right]}$, which is not constant in $k$.}
 
 
 - Result from familiar monocentric city model
