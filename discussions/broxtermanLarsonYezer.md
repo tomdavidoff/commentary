@@ -1,5 +1,5 @@
 ---
-title: "Discussion of Broxterman, Larson, Yezer: 'Characteristics of a Sufficient Statistic to Measure City Housing Prices'"
+title: 'Discussion of Broxterman, Larson, Yezer: "Characteristics of a Sufficient Statistic to Measure City Housing Prices"'
 author: "Thomas Davidoff, Sauder School of Business, University of British Columbia"
 date: "April 2026"
 bibliography: broxtermanLarsonYezer.bib
@@ -16,46 +16,67 @@ These are important contributions. The paper provides a guide to assemble price 
 
 ## Emphasis on Location as Heterogeneity
 
-In a dynamic monocentric city where commuting costs and the cost of developing
-a constant quality home at the urban fringe are constant, homes appreciate by
-the amount by which fringe homes get worse: the product of commuting cost per
-unit of distance at the urban fringe times the expansion of the fringe. As the
-authors observe, for this to yield equal percentage 
+In a stanard dynamic monocentric city where commuting costs and the cost of
+developing a constant quality home at the urban fringe are constant, homes
+appreciate by the amount by which fringe homes get worse: the product of
+commuting cost per unit of distance at the urban fringe times the expansion of
+the fringe. If boundary ($b(t)$) homes always cost $k$ to rent, then the cost
+of a home at distance $r$ is $x
+= h(r)\left[k+\int_{r}^{b(t)}\frac{\theta}{h(z)}dz\right]$, so $\frac{dx}{dt}
+= h(r)\theta\frac{\dot{b}}{h(b)}$, and $\frac{\frac{dx}{dt}}{x}
+= \frac{\theta\frac{\dot{b}}{h(z)}}{h(r)\left[k+\theta\int_{r}^{b(t)}\frac{1}{h(z)}dz\right]}$.
+As the authors note, this will only be a constant if the denominator is
+constant in $r$, e.g. if the income elasticity of housing demand is zero and
+the price elasticity is minus one, an unlikely combination.
+
+That we should not expect equal appreciation across locations given this result in a standard setting motivates the empirical analysis that shows non-constant appreciation across locations.
+
+### Price and distance in Vancouver
+
+There is a plausible case, however, for constant appreciation across locations. Recognizing that commuting speeds likely slow down as congestion increases near the city center, concave commuting cost as a function of distance is a reasonable modeling alternative. In \textcite{CosmanDavidoffWilliams}, rents are derived in a special case as $\log x(r) = \log h(r) + \log k + \theta\log\frac{b}{r}$, so $\frac{dx}{dt} = \theta\frac{\dot{b}}{b}x(r)$, and appreciation is constant across locations and equal to the rate of expansion of the urban fringe times the elasticity of commute cost with respect to distance. 
+
+Figure @fig:rentGradientVancouver shows median rent per square foot of condo
+apartments by rounded kilometers distant from Downtown Vancouver sold in
+Greater Vancouver in 2015 (before the exodus of foreign buyers in response to
+empty homes and foreign buyer taxes) and 2023 against distance, up to 25
+kilometers (roughly New Westminster). Data come from BC Assessment. Two
+patterns stand out. First, up to 10 kilometers distance, the gradient flattened
+dramatically between 2018 and 2023, violating equal appreciation. Second, a
+constant gradient in either levels or logs does not fit the data particularly
+well. In 2018, there is a pronounced flattening of the gradient at about 15
+kilometers that is not as evident in 2023. Future work might explore whether
+constant appreciation is implausible based simply on distance gradients, or
+whether violations are primarily due to changes in demand conditions. For
+Vancouver, the latter is plausible as foreign buyers may have been an important
+clientele for luxury condos (see, e.g. @PavlovSomerville).
 
 
-but the urban fringe expands over time, the appreciation of a home at a given distance from downtown is equal to the improvement 
-As the authors observe, in a standard monocentric city model, the derivative of housing rent per unit of hedonic quality with respect to distance from downtown is the ratio of the slope of commuting cost in distance divided by housing consumption. If the cost of commuting and the price of housing at an expanding urban fringe are constant with time, then the appreciation in housing rents for all homes will equal to the slope of the commute cost at the urban fringe times the rate at which the fringe expands. As that rent growth is a constant amount regardless of distance from do
-culllkku
+![Median condo price per square foot for condo sales in Greater Vancouver, 2015 and 2023. Data from BC Assessment](/Users/davidoff/projects/compression/text/distPriceYear.png){#fig:rentGradientVancouver}
 
-The authors observe in equation (4) that if transportation costs are linear in raw distance from downtown, then price gradients in a monocentric city are given by the ratio of that linear cost in distance divided by housing consumption. 
+### Pairwise Correlations Among Vancouver vs Suburban Types
+
+Available evidence suggests that price point and property type may be more important sources of variation in appreciation than  correlations as much as location within markets
+
+Table @tab:correlations shows correlations in 1-year price changes among single family and condo properties in Greater Vancouver and Fraser Valley markets, with the latter inclusive of the large suburb of Surrey as well as more exurban and rural locations. The correlations between the two markets' single family (.82) and condo (.70) are on average greater than cross-type correlations for within Greater Vancouver (.71) and the Fraser Valley (also .71). Over the 2014-2024 decade, Fraser Valley condos appreciated at an annual rate of 10.7\%, versus 5.9\% for Greater Vancouver single family homes. The intermediately priced Greater Vancouver condos and Fraser Value single family homes had intermediate appreciation rates.
 
 
-Without constant housing consumption by distance, if appreciation rates are constant in distance, the authors argue that appreciation rates will vary by distance.\footnote{This should be presented as a result, as I understand the paper it is implicit. The result is plausible intuitively but could use a formal proof. If rent per unit of housing is a constant $m$ plus $\theta\left[k-b]$, where $k$ is distance from downtown, and $b$ is the current urban fringe, then the appreciation rate is $\frac{\theta{\dot{b}}}{m+\theta\left[k-b\right]}$, which is not constant in $k$.}
+[Correlations among property types in 1-year price changes, data from Canadian Real Estate Association HPI]{#tab:correlations}
 
+|  | VanSingle | VanCondo | FVSingle | FVCondo |
+|---|---|---|---|---|
+| VanSingle | 1.00 | 0.71 | 0.82 | 0.54 |
+| VanCondo | 0.71 | 1.00 | 0.71 | 0.70 |
+| FVSingle | 0.82 | 0.71 | 1.00 | 0.71 |
+| FVCondo | 0.54 | 0.70 | 0.71 | 1.00 |
 
-- Result from familiar monocentric city model
-  - $\frac{d r(k)}{dk} = -\frac{\frac{d\text{commute cost}}{dk}}{h_{t}}$
-  - If I move a bit further, $|h\dot{r}| = |\dot{\text{commute cost}}|$
-- Also if constant (construction + option premium) at boundary
-  - $d\left[r(k)-r(b(t))\right] = \theta \dot{b} = dr(k) =$ constant
-  - Then need constant value in distance
-  - Some condition on income and price elasticities
-- But linear commute cost?
-  - 41st to 61st St in Manhattan vs random mile in the suburbs
-- Suppose $\ln p(h,k) = \ln h+\theta\log\frac{b}{k}$, then $g'(k)=0$ (with light conditions)
+- Log index growth 2014--2024: Fraser Valley condo: 10.7%
+- Greater Vancouver single: 5.9%
+- Story: "flight from quality" after foreign buyer ban?
 
 ---
 
+## GFC: Heterogeneity Driven by Subprime Propensity
 
-One-year appreciation rates appear almost identical whether census tracts are aggregated based on rooms, value, or units.   generally different across data Verifying that these are empirically grounded concerns using U.S. Census tract level, the paper shows
-empirically that home price growth is not generally constant across locations
-and that transaction frequency is generally not constant across locations,
-either. This implies bias in price growth when the index is intended to capture
-appreciation averaged against homes (or rooms or dollar value of homes). The
-authors propose an index with weights inverse to transaction frequency across
-locations (
-
-price indexes to Laspey that standard metropolitan-level price indexes are likely to offer biased three main contributions. First, it demonstrates that price growth is heterogeneous across space within metropolitan areas. This builds on prior findings, e.g. [@LandvoigtPiazessiSchneider2015], which also documented spatial heterogeneity in price growth. Second, the paper offers a new methodology for aggregating home price subindexes up to the metropolitan level in a way that overcomes bias due to transaction propensity. Third, the authors bring to the reader's attention an older question of whether homes should be weighted equally, by value, or by rooms in constructing a price index.  This last question is highly salient to the "shoebox condo" debate, which has been a major topic of public conversation in Vancouver and Toronto in recent years.
 
 ---
 
@@ -81,7 +102,6 @@ This works if $W_{ijt} = \sum_{k\in i} \frac{h_{t-1}(k)}{H_{t-1}(k)}$ for all $i
   - New homes a good example (excluded!)
   - But what data generating process causes this?
 
----
 ## My Empirical Work Plan for Discussion
 
 - Show clearly log beats linear price gradient in Vancouver
@@ -113,26 +133,6 @@ This works if $W_{ijt} = \sum_{k\in i} \frac{h_{t-1}(k)}{H_{t-1}(k)}$ for all $i
   - Approximately 0.6 (2 significant figures) with level (log) on RHS --- similar for condo and single family
 
 ---
-
-## Pairwise Correlations Among Vancouver vs Suburban Types
-
-*Type matters more than location?*
-
-|  | VanSingle | VanCondo | FVSingle | FVCondo |
-|---|---|---|---|---|
-| VanSingle | 1.00 | 0.71 | 0.82 | 0.54 |
-| VanCondo | 0.71 | 1.00 | 0.71 | 0.70 |
-| FVSingle | 0.82 | 0.71 | 1.00 | 0.71 |
-| FVCondo | 0.54 | 0.70 | 0.71 | 1.00 |
-
-- Log index growth 2014--2024: Fraser Valley condo: 10.7%
-- Greater Vancouver single: 5.9%
-- Story: "flight from quality" after foreign buyer ban?
-
----
-
-## GFC: Heterogeneity Driven by Subprime Propensity
-
 *Zip code price movements boom/bust (source: Zillow)*
 
 *Red: Flyover, Blue: Coastal, Green: Sand State*
