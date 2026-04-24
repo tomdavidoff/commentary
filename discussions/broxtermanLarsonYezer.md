@@ -1,4 +1,4 @@
----
+--
 title: 'Discussion of Broxterman, Larson, Yezer: "Characteristics of a Sufficient Statistic to Measure City Housing Prices"'
 author: "Thomas Davidoff, Sauder School of Business, University of British Columbia"
 date: "April 2026"
@@ -12,9 +12,9 @@ This paper shows that a transactions-based home price index will represent mean 
 
 Using both annual Census tract appreciation estimates from [@ContatLarson] (Figures 1 and 2) and coarser differences in appreciation rates between central cities and suburbs in American Housing Survey data (Tables 1 and 2), the paper shows both that appreciation rates and transaction frequencies vary with distance from downtown. The authors propose price indexes that average local (tract or central city versus suburb indicators) appreciation rates with weights proportional to housing units, rooms or value. Using [@ContatLarson] data, These three Laspeyre's-consistent methods provide appreciation rate estimates that are visually indistinguishable at an annual frequency for Boston and Houston, but accumulate to mild differences over the three decades between 1990 and 2020.  
 
-These are important contributions. The paper provides a guide to assemble price indexes that are more likely representative of price growth (and hence affordability and asset wealth) for all households in a metropolitan area than most indexes which rely on representativeness of the transacted stock. To have broader impact, the paper should address the following questions, described in more detail below. 1. Is it really clear in theory that rent growth should vary by location? 2. Why focus on price growth heterogeneity by location as opposed to, say, structure type?  3. What are empirical examples of failure to account for heterogeneity in price growth that would be solved by the proposed approach?
+These are important contributions. The paper provides a guide to assemble price indexes that are more likely representative of price growth (and hence affordability and asset wealth) for all households in a metropolitan area than most indexes which rely on representativeness of the transacted stock. To have broader impact, the paper should address the following questions, described in more detail below. 1. Is it really clear in theory that rent growth should vary by location? 2. Why focus on price growth heterogeneity by location as opposed to, say, structure type?  3. How are geographic areas with high weight but low transactions to be treated in index computation?
 
-## Emphasis on Location as Heterogeneity
+## Is common growth across locations really implausible in theory?
 
 In a stanard dynamic monocentric city where commuting costs and the cost of
 developing a constant quality home at the urban fringe are constant, homes
@@ -30,6 +30,8 @@ constant in $r$, e.g. if the income elasticity of housing demand is zero and
 the price elasticity is minus one, an unlikely combination.
 
 That we should not expect equal appreciation across locations given this result in a standard setting motivates the empirical analysis that shows non-constant appreciation across locations.
+
+## Is distance to downtown the right dimension of heterogeneity to focus on?
 
 ### Price and distance in Vancouver
 
@@ -53,7 +55,7 @@ clientele for luxury condos (see, e.g. @PavlovSomerville).
 
 ![Median condo price per square foot for condo sales in Greater Vancouver, 2015 and 2023. Data from BC Assessment](/Users/davidoff/projects/compression/text/distPriceYear.png){#fig:rentGradientVancouver}
 
-### Pairwise Correlations Among Vancouver vs Suburban Types
+### Pairwise Correlations in Greater Vancouver and the Fraser Valley
 
 Available evidence suggests that price point and property type may be more important sources of variation in appreciation than  correlations as much as location within markets
 
@@ -69,15 +71,95 @@ Table @tab:correlations shows correlations in 1-year price changes among single 
 | FVSingle | 0.82 | 0.71 | 1.00 | 0.71 |
 | FVCondo | 0.54 | 0.70 | 0.71 | 1.00 |
 
-- Log index growth 2014--2024: Fraser Valley condo: 10.7%
-- Greater Vancouver single: 5.9%
-- Story: "flight from quality" after foreign buyer ban?
 
----
+## Evidence from the boom and bust of the 2000s: Heterogeneity Driven by Subprime Propensity
 
-## GFC: Heterogeneity Driven by Subprime Propensity
+@LandvoigtPiazessiSchneider show that price appreciation was highly correlated with price point in Greater San Diego between 2000 and 2005, there is a spatial pattern to price point, but they argue that the important similarity was changes in credit conditions favoring appreciation at the low end of the quality and wealth spectra. 
+
+Figure @fig:zips below, taken from @DavidoffReview plots Zip Codes, with the
+horizontal axis representing population minority share based on the 2000 Census
+and the vertical axis representing the amplitude of the 2000s price cycle (log
+peak level squared divided by pre-and-post levels). The red points are in
+1"flyover" metropolitan areas, the blue on the Northeast US "Acela Corridor" or
+Pacific Coast, and the green are in the "Sand States" of Arizona,
+Florida,Nevada and non-Coastal California. Given the link between minority
+share and non-prime lending share and the seemingly high penetration of
+subprime lending in the Sand States, this is further evidence that the most
+intense geographic variation in price growth was driven by changing credit
+conditions.
+
+## Weighting choices
+
+The authors propose that an index weight subindexes, e.g. at the Census Tract
+level, based on the share of housing units, value, or rooms in each geography.
+Figure 3 shows that the choice of basis for weighting has almost no effect at
+high frequencies and small cumulative effects over three decades.
+
+Ignoring heterogeneity in rooms, value, and units, under the authors proposed
+weighting scheme, transactions will have weight inversely proportion to
+transaction activity in their sub-geography. This could add unwanted variance
+to the index if there are cells with small numbers of observations. An
+interesting exercise the authors might want to perform would be to consider
+optimal borrowing across subindexes. To the extent that the model is right in
+that distance from downtown is a key determinant of relative price growth, the
+authors might draw on the literature on optimal bandwidth size and shape for
+kernel estimators. A "rectangular'' with sharp boundaries at a tract boundary
+being the optimal choice seems like a knife-edge case. To the extent that
+submarkets consist of both property type or price point and location, the
+multi-dimensional bandwidth problem becomes both more complex but also likely
+more important as there may be a large number of cells with small numbers of
+transactions over any period. Intertemporal smoothing might also be part of an
+optimal index in that case.
 
 
+[Zillow Zip code price peak squared divided by product of 2000 and 2012 levels against minority share (from @DavidoffReview)](/Users/davidoff/projects/commentary/discussions/zips.png){#fig:zips}
+
+## Other issues: index use and data sources
+
+It would be useful in this paper to see cases in which a poor choice of index
+construction leads to a bad decision in an important context. Realtors and
+assessors certainly recognize differences across submarkets, and do not assume
+equal appreciation throughout a metropolitan area. It seems plausible, though,
+that mortgage backed securities packages assumed constant growth and volatility
+parameters within markets. @Hurstetal note that while US GSEs price loans
+almost free of geographical information, the private market does not. But
+whether loans are priced within markets based on appropriate indexes or
+subindexes is potentially interesting.
+
+This paper uses American Housing Survey data to show the importance of proper weighting of urban
+and suburban submarkets (Tables 1 and 2), but their quantitative results on the
+effect on the metropolitan index are likely affected by significant measurement
+error that arises in the AHS from some combination of owner assessed values and
+small samples. A glance at FHFA data versus estimates of appreciation from AHS
+show some stark differences. For example, the authors find 13\% annual
+appreciation using AHS for metro Atlanta, but FHFA indicates roughly 7\% annual
+growth between 2015 and 2019. Other metropolitan areas appear more plausibly
+measured by AHS.
+
+## Summary
+
+This paper provides important guidance for home price index construction.
+Transacted properties may fail to be representative of the overall housing
+stock for several reasons. Price indexes for larger markets can be important
+for exercises such as consumer price [EXACTLY NOT THIS!] index calculation, and should thus be
+representative of the whole housing stock, not just the transacted stock.
+
+**Important takeaways from paper:**
+
+- Price growth not constant across submarkets
+- Spatial differences in growth stand out
+- Aggregation weights depend on target unit of measure
+- Transaction indicator unlikely optimal weighting
+
+**Suggestions:**
+
+- Consider whether spatial differentiation warrants focus
+- Sane models *can* imply constant appreciation in distance
+  - My evidence mixed and odd on gradient
+  - Discuss this literature (Mills, McMillen, Coulson, ...) more
+- Use better data and work with kernel smoothing techniques
+  - Inverse transaction weights likely problematic
+- Do more work to convince that large aggregates have value
 ---
 
 ## Target for Laspeyres Index: Units
@@ -193,21 +275,4 @@ This works if $W_{ijt} = \sum_{k\in i} \frac{h_{t-1}(k)}{H_{t-1}(k)}$ for all $i
 
 ---
 
-## Summary
 
-**Important takeaways from paper:**
-
-- Price growth not constant across submarkets
-- Spatial differences in growth stand out
-- Aggregation weights depend on target unit of measure
-- Transaction indicator unlikely optimal weighting
-
-**Suggestions:**
-
-- Consider whether spatial differentiation warrants focus
-- Sane models *can* imply constant appreciation in distance
-  - My evidence mixed and odd on gradient
-  - Discuss this literature (Mills, McMillen, Coulson, ...) more
-- Use better data and work with kernel smoothing techniques
-  - Inverse transaction weights likely problematic
-- Do more work to convince that large aggregates have value
